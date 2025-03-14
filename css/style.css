@@ -199,7 +199,6 @@ body {
   display: flex;
   margin-top: 2rem;
   background-color: rgba(245, 248, 245, 0.158);
-  flex-wrap: wrap;
 }
 .contact .row .maps {
   flex: 1 1 45rem;
@@ -218,6 +217,22 @@ body {
   background-color: var(--bg);
   border: 1px solid #eee;
   padding-left: 2rem;
+}
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+.contact .row form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
 }
 /* media queries */
 
@@ -280,6 +295,15 @@ body {
   }
   .menu p {
     font-size: 1.2rem;
+  }
+  .contact .row {
+    flex-wrap: wrap;
+  }
+  .contact .row .maps {
+    height: 30rem;
+  }
+  .contact .row form {
+    padding-top: 0;
   }
 }
 /* mobile phone */
