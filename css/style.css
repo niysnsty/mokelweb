@@ -10,11 +10,13 @@
   border: none;
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
-  min-height: 4000px;
 }
 /* navbar */
 .navbar {
@@ -198,7 +200,7 @@ body {
 .contact .row {
   display: flex;
   margin-top: 2rem;
-  background-color: rgba(245, 248, 245, 0.158);
+  background-color: #22222262;
 }
 .contact .row .maps {
   flex: 1 1 45rem;
@@ -234,8 +236,40 @@ body {
   background-color: var(--primary);
   cursor: pointer;
 }
-/* media queries */
 
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+footer .socials {
+  padding: 1rem 0;
+}
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+footer .links {
+  margin-bottom: 1.4rem;
+}
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+footer .credit {
+  font-size: 0.8rem;
+}
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* media queries */
 /* laptop */
 @media (max-width: 136px) {
   html {
@@ -303,7 +337,7 @@ body {
     height: 30rem;
   }
   .contact .row form {
-    padding-top: 0;
+    padding-top: 1;
   }
 }
 /* mobile phone */
