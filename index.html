@@ -122,18 +122,18 @@
           class="maps"
         ></iframe>
 
-        <form action="">
+        <form id="wa-form">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="Nama" />
+            <input type="text" placeholder="Nama" id="nama" />
           </div>
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="text" placeholder="Email" />
+            <input type="text" placeholder="Email" id="email" />
           </div>
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="No Hp" />
+            <input type="text" placeholder="No Hp" id="nohp" />
           </div>
           <button type="submit" class="btn">Kirim Pesan</button>
         </form>
@@ -144,8 +144,16 @@
     <!-- footer section start -->
     <footer>
       <div class="socials">
-        <a href="#"><i data-feather="instagram"></i></a>
-        <a href="#"><i data-feather="youtube"></i></a>
+        <a
+          href="https://www.instagram.com/ny.vxzy?igsh=azM5YjEwYWQ1Mm10"
+          target="_blank"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a
+          href="https://youtube.com/@niysnsty?si=LWmTVS1mJFpmup74"
+          target="_blank"
+          ><i data-feather="youtube"></i
+        ></a>
       </div>
       <div class="links">
         <a href="#home">Home</a>
@@ -163,5 +171,25 @@
     </script>
     <!-- my javascript-->
     <script src="js/script.js"></script>
+    <script>
+      document
+        .getElementById("wa-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Mencegah form submit default
+
+          const nama = document.getElementById("nama").value;
+          const email = document.getElementById("email").value;
+          const nohp = document.getElementById("nohp").value;
+
+          const pesan = `Halo, saya ingin menghubungi MnM Drink.%0A%0ANama: ${nama}%0AEmail: ${email}%0ANo HP: ${nohp}`;
+
+          // Ganti 6281234567890 dengan nomor WA tujuan (gunakan format internasional tanpa tanda +)
+          const nomorWA = "6285932125532";
+
+          const url = `https://wa.me/qr/O6HRANAY5CHJO1`;
+
+          window.open(url, "_blank"); // Buka di tab baru
+        });
+    </script>
   </body>
 </html>
