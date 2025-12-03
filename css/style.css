@@ -3,6 +3,7 @@
   --bg: #8d6742;
 }
 * {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   color: #fff;
 }
@@ -50,7 +51,7 @@ body {
   color: var(--primary);
 }
 .navbar .navbar-nav a::after {
-  content: "";
+  content: '';
   display: block;
   padding-bottom: 0.5rem;
   border-bottom: 0.1rem solid var(--primary);
@@ -71,7 +72,8 @@ body {
   display: none;
 }
 /*  hero section */
-.hero {
+.hero,
+.search {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -114,6 +116,7 @@ body {
   line-height: 1.4;
   font-weight: 100;
   text-shadow: 1px 1px 3px rgba(141, 103, 66, 0.5);
+  mix-blend-mode: difference;
 }
 .hero .content .cta {
   margin-top: 1rem;
@@ -169,7 +172,7 @@ body {
 /* menu section */
 .menu h2,
 .contac h2 {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 .menu p,
 .contac p {
@@ -200,7 +203,7 @@ body {
 .contact .row {
   display: flex;
   margin-top: 2rem;
-  background-color: #22222262;
+  background-color: #222;
 }
 .contact .row .maps {
   flex: 1 1 45rem;
@@ -345,14 +348,4 @@ footer .credit a {
   html {
     font-size: 55%;
   }
-}
-.search {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-image: url("../img/header-bg.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
 }
