@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>marketplace</title>
-</head>
-<body>
-    <h1>this is marketplace page</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produk Kami - MnM Drink</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+    <!-- feather icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- my style-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">M<span>n</span>M Drink.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="marketplace.html" class="active">Marketplace</a>
+        <a href="index.html#about">Tentang Kami</a>
+        <a href="index.html#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- marketplace section start -->
+    <section class="marketplace">
+      <h2><span>Produk</span>Kami</h2>
+      
+      <div class="marketplace-container">
+        <!-- Sidebar Filter -->
+        <aside class="sidebar">
+          <h3>Filter</h3>
+          
+          <div class="filter-group">
+            <label for="category">Kategori</label>
+            <select id="category-filter">
+              <option value="all">Semua</option>
+              <option value="infused">Infused Water</option>
+              <option value="coffee">Kopi</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="price">Harga Maksimal: <span id="price-value">20000</span></label>
+            <input type="range" id="price-filter" min="0" max="50000" step="1000" value="20000">
+          </div>
+        </aside>
+
+        <!-- Product List -->
+        <div class="product-list" id="product-container">
+          <!-- Products will be rendered here by JS -->
+        </div>
+      </div>
+    </section>
+    <!-- marketplace section end -->
+
+    <!-- Floating Cart Button -->
+    <a href="shopcard.html" class="floating-cart">
+      <i data-feather="shopping-cart"></i>
+      <span id="cart-count">0</span>
+    </a>
+
+    <!-- footer section start -->
+    <footer>
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/ny.vxzy?igsh=azM5YjEwYWQ1Mm10"
+          target="_blank"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a
+          href="https://youtube.com/@niysnsty?si=LWmTVS1mJFpmup74"
+          target="_blank"
+          ><i data-feather="youtube"></i
+        ></a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">Niyy</a> | 2025 &copy Copyright All right reserved; </p>
+      </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/marketplace.js"></script>
+  </body>
 </html>

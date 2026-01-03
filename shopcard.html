@@ -1,11 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shopcard</title>
-</head>
-<body>
-    <h1>this is shopcard page</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keranjang Belanja - MnM Drink</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
+      rel="stylesheet"
+    />
+    <!-- feather icons-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- my style-->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .cart-section {
+        padding: 10rem 7% 1.4rem;
+        min-height: 80vh;
+      }
+      .cart-section h2 {
+        text-align: center;
+        font-size: 2.6rem;
+        margin-bottom: 3rem;
+      }
+      .cart-section h2 span {
+        color: var(--primary);
+      }
+      .cart-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+      .cart-table th, .cart-table td {
+        padding: 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid #666;
+      }
+      .cart-table th {
+        background-color: var(--primary);
+        color: #000;
+        font-size: 1.2rem;
+      }
+      .cart-table td img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .cart-item-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .quantity-btn {
+        background-color: #4c2c0d;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 0.3rem;
+      }
+      .remove-btn {
+        color: #ff4d4d;
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+      .cart-summary {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+      }
+      .cart-summary h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 0.5rem;
+      }
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+      .checkout-btn {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--primary);
+        color: #000;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+      }
+      .empty-cart {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 3rem;
+      }
+      @media (max-width: 768px) {
+        .cart-table {
+          display: block;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">M<span>n</span>M Drink.</a>
+
+      <div class="navbar-nav">
+        <a href="index.html">Home</a>
+        <a href="marketplace.html">Marketplace</a>
+        <a href="index.html#about">Tentang Kami</a>
+        <a href="index.html#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+      <h2><span>Keranjang</span> Belanja</h2>
+      
+      <div id="cart-content">
+        <!-- Cart Items will be rendered here -->
+      </div>
+
+    </section>
+
+    <!-- footer section start -->
+    <footer>
+      <div class="socials">
+        <a
+          href="https://www.instagram.com/ny.vxzy?igsh=azM5YjEwYWQ1Mm10"
+          target="_blank"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a
+          href="https://youtube.com/@niysnsty?si=LWmTVS1mJFpmup74"
+          target="_blank"
+          ><i data-feather="youtube"></i
+        ></a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">Niyy</a> | 2025 &copy Copyright All right reserved; </p>
+      </div>
+    </footer>
+    <!-- footer section end -->
+
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
 </html>
